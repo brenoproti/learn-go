@@ -11,12 +11,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer req.Body.Close()
 
 	res, err := io.ReadAll(req.Body)
 	if err != nil {
 		panic(err)
 	}
-	req.Body.Close()
 
 	fmt.Printf("%v\n", string(res))
 }
