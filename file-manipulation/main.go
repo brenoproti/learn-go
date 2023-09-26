@@ -53,4 +53,10 @@ func main() {
 		fmt.Println(string(buffer[:n]))
 	}
 
+	// Delete file
+	err = os.Remove(fileName)
+	if err != nil {
+		panic(err)
+	}
+
 }
