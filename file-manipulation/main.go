@@ -8,8 +8,10 @@ import (
 
 func main() {
 
+	const fileName string = "file-manipulation/test.txt"
+
 	// Create file
-	f, err := os.Create("test.txt")
+	f, err := os.Create(fileName)
 	if err != nil {
 		panic(err)
 	}
@@ -25,7 +27,7 @@ func main() {
 	f.Close()
 
 	// Read file
-	file, err := os.ReadFile("test.txt")
+	file, err := os.ReadFile(fileName)
 	if err != nil {
 		panic(err)
 	}
