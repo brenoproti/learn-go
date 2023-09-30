@@ -21,5 +21,5 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	println(string(body))i
+	println(string(body))
 }
